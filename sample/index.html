@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="lib/photoswipe/css/photoswipe.css" />
+		<link rel="stylesheet" href="lib/photoswipe/default-skin/default-skin.css" />
+		<link rel="stylesheet" href="../src/css/angular-photoswipe.css" />
+	</head>
+	<body ng-app='app'>
+		<!-- Dat gallery -->
+		<div ng-controller="imageController" class="image-thumbs">
+			<h2>Image gallery:</h2>
+			<div id="photoswipe" photo-swipe images="images">
+			</div>
+		</div>
+				
+		<!-- Dem photoswipe -->
+		<div photo-slider></div>
+		
+		<script src="lib/angularjs/angular.js" type="text/javascript"></script>
+		<script src="lib/photoswipe/js/photoswipe.min.js" type="text/javascript"></script>
+		<script src="lib/photoswipe/js/photoswipe-ui-default.min.js" type="text/javascript"></script>
+		<script src="../src/js/angular-photoswipe.js" type="text/javascript"></script>
+		<script src="app.js" type="text/javascript"></script>
+	</body>
+</html>

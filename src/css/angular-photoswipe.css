@@ -1,0 +1,41 @@
+.photoswipe-gallery {
+	font-family: 'Arial', 'Helvetica', 'sans-serif';
+	width: 100%;
+	float: left;
+	padding: 10px;
+}
+
+.photoswipe-gallery > figure {
+	display: block;
+  	float: left;
+  	margin: 0 5px 5px 0;
+  	border: 1px solid #ccc;
+}
+
+.photoswipe-gallery > figure > figcaption {
+	padding: 10px;
+}
+
+.photoswipe-gallery img {
+  width: 100%;
+  height: auto;
+}
+/*
+.pswp__zoom-wrap {
+	margin: 0 auto;
+}
+
+	.pswp__zoom-wrap img + img {
+	}
+
+.pswp img {
+	max-width: 100%;
+	height: 100% !important;
+	width: auto !important;
+	display: block;
+	margin: 0 auto;
+}
+
+.pswp__img {
+	position: relative;
+}*/
