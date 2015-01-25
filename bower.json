@@ -1,0 +1,40 @@
+{
+  "name": "angular-photoswipe",
+  "version": "1.0.0",
+  "authors": [
+    "Jason Magpantay"
+  ],
+  "description": "Angular directives for PhotoSwipe",
+  "main": [
+    "./dist/angular-photoswipe.js", 
+    "./dist/angular-photoswipe.min.js", 
+    "./dist/angular-photoswipe.css",
+    "./dist/angular-photoswipe.min.css"
+  ],
+  "keywords": [
+    "angular-photoswipe",
+    "ng-photoswipe"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.10",
+    "photoswipe": "~4.0.5"
+  },
+  "exportsOverride": {
+  	"photoswipe": {
+      "js": "dist/*.min.js",
+      "css": "dist/*.css",
+      "default-skin": "dist/default-skin/*.*"
+    },
+	"angular": {
+	  "": "angular.min.js"
+	}
+  }
+}
