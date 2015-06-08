@@ -172,7 +172,8 @@ ngPhotoSwipe.directive('photoSwipe', [ function () {
 						// otherwise to 1.5x, to make sure that double-tap gesture always zooms image
 						return item.initialZoomLevel < 0.7 ? 1 : 1.5;
 					}
-				}
+				},
+                history: false
 			};
 
 			if(disableAnimation) {
