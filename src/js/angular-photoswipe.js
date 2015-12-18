@@ -182,6 +182,17 @@ ngPhotoSwipe.directive('photoSwipe', [ function () {
 			// Pass data to PhotoSwipe and initialize it
 			gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
 			gallery.init();
+			
+			// On image loaded
+			gallery.listen('imageLoadComplete', function(index, item) { 
+	            $rootScope.$broadcast('PS_IMAGE_LOAD_COMPLETE');
+			});
+
+			// On close gallery
+			gallery.listen('close', function(index, item) { 
+	            $rootScope.$broadcast('PS_CLOSE_GALLERY');
+			});
+			
 		};
 
 		// loop through all gallery elements and bind events
