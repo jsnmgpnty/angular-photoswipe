@@ -30,6 +30,7 @@ ngPhotoSwipe.directive('photoSwipe', [ function () {
 				// create slide object
 				item = {
 					src: linkEl.getAttribute('href'),
+					itemid: linkEl.getAttribute('itemid'),					
 					w: parseInt(size[0], 10),
 					h: parseInt(size[1], 10)
 				};
@@ -137,6 +138,9 @@ ngPhotoSwipe.directive('photoSwipe', [ function () {
 
 			items = parseThumbnailElements(galleryElement);
 
+            // On open photoswipe
+			$rootScope.$broadcast('PS_OPEN_PHOTO_SWIPE', items);
+			
 			// define options (if needed)
 			options = {
 				index: index,
@@ -286,7 +290,7 @@ ngPhotoSwipe.directive('photoGallery', [ function () {
 					'</a>' +
 				'</div>' +
 				'<div ng-switch-default>' +
-					'<a href="{{img.src}}" itemprop="contentUrl" data-size="{{img.size}}">' +
+					'<a href="{{img.src}}" itemprop="contentUrl" data-size="{{img.size}}" itemid="{{img.itemid}}">' +
 						'<img ng-src="{{img.thumb}}" itemprop="thumbnail" alt="{{img.caption}}" />' +
 					'</a>' +
 				'</div>' +
